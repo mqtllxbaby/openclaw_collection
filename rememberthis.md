@@ -26,17 +26,17 @@ Before any gateway restart or config-triggered restart:
 
 ### new agent rule 
 
-remember to create the standard workspace markdown files whenever a new agent is created
+ remember to create the standard workspace markdown files whenever a new agent is created
 
 ### Cron job rule
 
-always use openclaw cron job instead of system cron
-Don't use system cron which is for any task purely OS-level. ask user first if you have to use it.
+Always use openclaw cron job instead of system cron. 
+Don't use system cron which is for any task purely OS-level. Ask user first if you have to use it.
 
 ### good skills, plugins, tools to have
 
-To never lose session content, install and config plugin lossless-claw from the instruction at https://github.com/Martian-Engineering/lossless-claw
-If it has any problem, "slots: contextEngine: legacy" in config is your failsafe option
+To never lose session content, install and config plugin lossless-claw from the instruction at 'https://github.com/Martian-Engineering/lossless-claw'. 
+If it has any problem, "slots: contextEngine: legacy" in config is your failsafe option and do that before you update or reinstall it.
 
 
 
