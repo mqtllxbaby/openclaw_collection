@@ -2,6 +2,7 @@
 
 **Version:** 2026.03.13
 **License:** MIT
+**GitHub location:** <https://github.com/mqtllxbaby/openclaw_collection/tree/main/skills/openclawdocs>
 
 `openclawdocs` is a reusable OpenClaw documentation skill for answering setup, configuration, migration, troubleshooting, and version-specific questions.
 
@@ -54,7 +55,8 @@ This version is prepared for future publishing/sharing:
 
 ## Public references
 
-- Docs: <https://docs.openclaw.ai>
-- Index: <https://docs.openclaw.ai/llms.txt>
-- Source: <https://github.com/openclaw/openclaw>
+- This skill on GitHub: <https://github.com/mqtllxbaby/openclaw_collection/tree/main/skills/openclawdocs>
+- OpenClaw docs: <https://docs.openclaw.ai>
+- OpenClaw docs index: <https://docs.openclaw.ai/llms.txt>
+- OpenClaw source: <https://github.com/openclaw/openclaw>
 - ClawHub: <https://clawhub.com>
