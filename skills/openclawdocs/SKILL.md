@@ -1,6 +1,6 @@
 ---
 name: openclawdocs
-description: OpenClaw documentation expert for setup, configuration, troubleshooting, migrations, CLI usage, automation, channels, tools, skills, and version-specific behavior. Use whenever the user asks how OpenClaw works, how to configure or fix it, what changed between versions, which doc page applies, or when runtime behavior seems to disagree with the docs.
+description: OpenClaw documentation expert matching latest version to help LLM know it better. Use whenever the user asks how OpenClaw works, how to configure or fix it, what changed between versions, which doc page applies, or when runtime behavior seems to disagree with the docs.
 ---
 
 # OpenClaw Docs
