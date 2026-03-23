@@ -1,6 +1,6 @@
 ---
 name: openclawdocs
-description: OpenClaw documentation expert matching latest version to help LLM know it better. Use whenever the user asks how OpenClaw works, how to configure or fix it, what changed between versions, which doc page applies, or when runtime behavior seems to disagree with the docs.
+description: OpenClaw documentation expert for setup, configuration, troubleshooting, migrations, CLI usage, automation, channels, tools, skills, and version-specific behavior. Use whenever the user asks how OpenClaw works, how to configure or fix it, what changed between versions, which doc page applies, or when runtime behavior seems to disagree with the docs.
 ---
 
 # OpenClaw Docs
@@ -41,14 +41,18 @@ When the user is asking about config, commands, or behavior that may vary by ver
 
 - Older installs may use legacy config structures or older command names.
 - Modern installs use `channels/` rather than older `providers/` guidance.
-- Some automation, plugin, and tool behaviors changed across 2026.x releases.
+- OpenClaw 2026.3.22 shifted several workflows that are easy to answer incorrectly from stale memory:
+  - browser attach guidance now prefers the existing-session / `profile=user` path over older legacy extension-relay guidance
+  - built-in image generation is centered on the core `image_generate` tool and `agents.defaults.imageGenerationModel`, not the old bundled `nano-banana-pro` wrapper
+  - plugin SDK guidance should point at `openclaw/plugin-sdk/*`, not the removed legacy SDK surface
 - If you are unsure whether a behavior is documented or source-observed, label it clearly.
 
 ## Preferred lookup order
 
-Installed openclaw source is always the source of truth. 
-local docs and public docs are useful and but can be outdated.
-Tell user clearly if there is any conflict between them.
+Installed OpenClaw source is the final source of truth.
+Local docs are the first place to look for practical answers.
+Public docs are useful, but they can lag or lead the installed build.
+Tell the user clearly when local docs, public docs, and installed source disagree.
 
 Treat the helper scripts in `scripts/` as convenience fallbacks, not the primary source of truth.
 

@@ -1,3 +1,18 @@
+### Version: 2026.3.22
+
+**Key Changes in 2026.3.22:**
+- **Browser / Chrome MCP:** legacy Chrome extension relay guidance is no longer the preferred path; current docs center on existing-session attach and `profile=user`.
+- **Image generation:** built-in image creation/editing is centered on the core `image_generate` tool and `agents.defaults.imageGenerationModel`; the old bundled `nano-banana-pro` wrapper/docs are gone.
+- **Plugin SDK:** plugin guidance should use `openclaw/plugin-sdk/*`; the older monolithic SDK surface was removed.
+- **ClawHub:** native OpenClaw flows now cover skill search / install / update, and plugin installs can resolve through ClawHub-backed paths.
+- **Providers / tools:** new bundled or improved provider/tool coverage includes Exa, Tavily, Firecrawl, Anthropic Vertex, Chutes, and newer OpenAI/GitHub Copilot forward-compat paths.
+- **Agents / UX:** per-agent thinking defaults, `/btw`, and multiple control-UI / usage refinements landed across this release family.
+- **Config migration reminders:** removed/stale plugin references should be cleaned after upgrade, and older sample image-generation config should be migrated to the native image-generation config path.
+
+**Practical note for this skill:** answers should prefer local docs/source for 2026.3.22 and should avoid old relay-era browser advice or old nano-banana skill-era image-generation advice unless explicitly discussing legacy installs.
+
+---
+
 ### Version: 2026.3.13
 
 **Key Changes in 2026.3.13:**

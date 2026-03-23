@@ -1,12 +1,12 @@
 # openclawdocs
 
-**Version:** 2026.3.13
+**Version:** 2026.3.22
 **License:** MIT
 **GitHub location:** <https://github.com/mqtllxbaby/openclaw_collection/tree/main/skills/openclawdocs>
 
 `openclawdocs` is a reusable OpenClaw documentation skill for answering setup, configuration, migration, troubleshooting, and version-specific questions.
 
-its version should match openclaw version and update for every openclaw release
+Its version should match the installed OpenClaw release and be refreshed for each meaningful OpenClaw version change.
 
 ## What it helps with
 
@@ -42,6 +42,7 @@ This version is prepared for future publishing/sharing:
 - stronger trigger description
 - clearer distinction between documented vs source-observed behavior
 - generic snippets that other users can adapt safely
+- refreshed guidance for OpenClaw 2026.3.22 release-family changes, especially browser attach, built-in image generation, and plugin-SDK migration
 
 ## Notes
 
