@@ -1,6 +1,6 @@
 # openclawdocs
 
-**Version:** 2026.3.22
+**Version:** 2026.3.23
 **License:** MIT
 **GitHub location:** <https://github.com/mqtllxbaby/openclaw_collection/tree/main/skills/openclawdocs>
 
