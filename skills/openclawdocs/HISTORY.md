@@ -1,3 +1,16 @@
+### Version: 2026.3.23
+
+**Key Changes in 2026.3.23:**
+- **Auth/OpenAI tokens:** Fixed live gateway auth-profile writes reverting freshly saved credentials to stale in-memory values; models auth paste-token now writes to resolved agent store, fixing expired OpenAI token refresh issues (refresh_token_reused).
+- **Plugin runtimes:** Bundled plugin runtime sidecars (WhatsApp, Matrix, etc.) now included in npm package, fixing global install failures.
+- **CLI/channel auth:** Auto-select single configured login-capable channel, harden channel IDs against prototype-chain/control-character abuse, improved on-demand channel installs.
+- **Qwen (Alibaba Cloud Model Studio):** Added standard DashScope endpoints for China/global API keys alongside existing Coding Plan endpoints.
+- **UI/CSP:** Improved inline script CSP handling, consolidated button primitives, refined Knot theme with WCAG 2.1 AA contrast.
+
+**Practical note for this skill:** This release fixes the OAuth token refresh bug that caused authentication failures in 2026.3.22.
+
+---
+
 ### Version: 2026.3.22
 
 **Key Changes in 2026.3.22:**
