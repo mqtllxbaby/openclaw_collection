@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026.3.24
+- Updated skill version to match OpenClaw 2026.3.24
+- Refreshed release history with the 2026.3.24 machine-relevant changes
+- Tightened version-aware guidance around OpenAI-compatible gateway API coverage, tool visibility, restart resume behavior, and outbound media handling
+
 ## 2026.3.23
 - Updated skill version to match OpenClaw 2026.3.23
 - Key fix: OAuth token refresh bug fix (refresh_token_reused issue)

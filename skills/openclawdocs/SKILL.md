@@ -45,6 +45,11 @@ When the user is asking about config, commands, or behavior that may vary by ver
   - browser attach guidance now prefers the existing-session / `profile=user` path over older legacy extension-relay guidance
   - built-in image generation is centered on the core `image_generate` tool and `agents.defaults.imageGenerationModel`, not the old bundled `nano-banana-pro` wrapper
   - plugin SDK guidance should point at `openclaw/plugin-sdk/*`, not the removed legacy SDK surface
+- OpenClaw 2026.3.24 added or sharpened a few areas worth calling out explicitly when relevant:
+  - the gateway/OpenAI-compatible surface now includes `/v1/models` and `/v1/embeddings`
+  - explicit model override forwarding through `/v1/chat/completions` and `/v1/responses` is broader
+  - `/tools` and the Control UI are better at showing what the current agent can actually use right now
+  - restart-sentinel wake behavior and outbound local-media handling improved, which matters for restart-heavy and media-heavy workflows
 - If you are unsure whether a behavior is documented or source-observed, label it clearly.
 
 ## Preferred lookup order

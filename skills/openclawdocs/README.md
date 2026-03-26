@@ -1,12 +1,14 @@
 # openclawdocs
 
-**Version:** 2026.3.23
+**Version:** 2026.3.24
 **License:** MIT
 **GitHub location:** <https://github.com/mqtllxbaby/openclaw_collection/tree/main/skills/openclawdocs>
 
 `openclawdocs` is a reusable OpenClaw documentation skill for answering setup, configuration, migration, troubleshooting, and version-specific questions.
 
 Its version should match the installed OpenClaw release and be refreshed for each meaningful OpenClaw version change.
+
+Current local target: OpenClaw 2026.3.24.
 
 ## What it helps with
 
@@ -20,8 +22,8 @@ Its version should match the installed OpenClaw release and be refreshed for eac
 
 - `README.md` — this file to explain about this project
 - `SKILL.md` — main workflow and triggering guidance
-- `CHANGELOG.md` — record change of the different verion of this package
-- `HISTORY.md` — record change of the different verion of openclaw
+- `CHANGELOG.md` — record changes across released versions of this skill
+- `HISTORY.md` — record the OpenClaw release-family changes this skill should track
 - `scripts/` — helper utilities for version checks and doc lookup
 
 ## Helper scripts

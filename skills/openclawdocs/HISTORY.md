@@ -1,3 +1,17 @@
+### Version: 2026.3.24
+
+**Key Changes in 2026.3.24:**
+- **Gateway/OpenAI compatibility:** added `/v1/models` and `/v1/embeddings`, and improved forwarding of explicit model overrides through `/v1/chat/completions` and `/v1/responses`.
+- **Tool visibility:** `/tools` and the Control UI now better reflect what the current agent can actually use right now.
+- **Restart continuity:** restart-sentinel wake behavior improved, which matters for interrupted sessions after updates/restarts.
+- **Outbound media / local files:** outbound media handling is more robust under the configured fs policy.
+- **Runtime compatibility:** Node 22 floor lowered to 22.14+, reducing self-update/version-floor surprises on Node 22 installs.
+- **Channel fixes:** multiple Telegram/Discord/Slack fixes landed, but the most relevant local impact remains improved delivery and routing behavior rather than a config migration.
+
+**Practical note for this skill:** for 2026.3.24 answers, call out the new OpenAI-compatible gateway API surface, the stronger tool-availability visibility, and the improved restart/media behavior when those topics are relevant.
+
+---
+
 ### Version: 2026.3.23
 
 **Key Changes in 2026.3.23:**
