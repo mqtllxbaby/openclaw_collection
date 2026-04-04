@@ -1,3 +1,46 @@
+### Version: 2026.4.2
+
+**Key Changes in 2026.4.2:**
+- **Config migrations:** legacy xAI `tools.web.x_search.*` and Firecrawl `tools.web.fetch.firecrawl.*` paths moved under plugin-owned config, so config answers should warn about those migrations and point users at `openclaw doctor --fix` when upgrading older setups.
+- **Task Flow:** the core Task Flow substrate was restored/expanded with durable flow state, `openclaw flows` inspection/recovery, and managed child-task spawning, so answers about background orchestration should now consider flows more explicitly.
+- **Exec defaults / approvals:** gateway/node host exec defaults shifted again toward no-prompt YOLO-style defaults in the documented runtime behavior, and approval/config normalization got additional fixes; answers should verify the live effective exec policy rather than assuming older 2026.4.1 semantics.
+- **Exec/channel routing:** DM-first native approvals and host-policy handling were tightened further, so approval behavior may now differ from earlier 2026.4.x guidance.
+- **Transport/routing fixes:** multiple provider routing, auth/header normalization, loopback exec pairing, and media HTTP fixes landed; when users report odd provider or local-exec regressions after 2026.3.31, 2026.4.2 is now part of the likely explanation space.
+- **Other notable additions/fixes:** plugin `before_agent_reply`, Android assistant entrypoints, Matrix mention/threading improvements, Feishu comment-thread improvements, WhatsApp presence/media fixes, and Slack formatting fixes.
+
+**Practical note for this skill:** for 2026.4.2 answers, check first whether the user’s issue is really an update-status/config-migration/task-flow/exec-policy question before reusing 2026.4.1-era advice.
+
+---
+
+### Version: 2026.4.1
+
+**Key Changes in 2026.4.1:**
+- **Tasks / task board:** `/tasks` is now a chat-native background task board for the current session, so answers about detached work should mention it when users want task visibility instead of only `/status` or session lists.
+- **Agents / provider defaults:** `agents.defaults.params` now exists for global provider parameter defaults, so config answers should not assume model selection is the only agent-wide tuning surface.
+- **Cron / tool scoping:** cron now supports per-job tool allowlists (`openclaw cron --tools`), so safer cron guidance can recommend narrower tool access instead of only broad agent/global policy changes.
+- **Exec / approvals / cron:** approval/default behavior around exec is more consistent again, with fixes for approval persistence, cron no-route dead-ends, and host-policy interactions; old advice that assumes approvals are merely UI glitches may now be wrong.
+- **Gateway / reload / tasks:** 2026.4.1 fixed config-reload restart loops and task-registry stalls/hangs, so post-upgrade task-board or gateway-hang issues may map to this release family.
+- **Channel / delivery fixes:** Telegram error suppression/retry behavior and topic-aware exec approval routing improved, so older workaround advice for repeated Telegram failures or wrong-thread approvals may be stale.
+- **Other notable additions:** bundled SearXNG web search provider, Bedrock Guardrails support, Voice Wake on macOS, Feishu Drive comment flows, more Z.AI models, and QMD collection-pattern fixes.
+
+**Practical note for this skill:** for 2026.4.1 answers, explicitly check whether the user is dealing with task-board/task-ledger behavior, cron tool allowlists, or exec-approval/security defaults before reusing older 2026.3.x guidance.
+
+---
+
+### Version: 2026.3.31
+
+**Key Changes in 2026.3.31:**
+- **Background tasks / flows:** detached work is now much more unified across ACP, subagents, cron, and background CLI execution, with a shared task ledger and new flow visibility surfaces.
+- **Agents / exec defaults:** per-agent `tools.exec` defaults are now honored more reliably; this can change real runtime behavior for `host`, `security`, `ask`, and `node` in ways older installs did not enforce consistently.
+- **/btw reliability:** `/btw` side questions now explicitly disable provider reasoning on the affected path, fixing the no-response failure mode seen in some sessions.
+- **Security hardening:** dangerous installs fail closed by default, trusted-proxy auth got stricter, and node commands/events are kept behind stronger pairing/approval boundaries.
+- **Browser / MCP / CDP adjacent changes:** broader MCP/remote-server and transport work landed, but answers should still distinguish documented browser flows from source-observed transport details.
+- **Other notable additions:** QQ Bot channel plugin, Slack exec approvals, WhatsApp reactions, Matrix proxy/history/thread controls, QMD extra collections, and OpenAI Responses verbosity forwarding.
+
+**Practical note for this skill:** for 2026.3.31 answers, explicitly call out when behavior changed because detached/background runs are now more unified or because per-agent exec defaults are finally being enforced. Also warn when stricter security defaults may explain why an old workflow now asks for approval or fails closed.
+
+---
+
 ### Version: 2026.3.24
 
 **Key Changes in 2026.3.24:**

@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026.4.2
+- Updated skill version to match OpenClaw 2026.4.2
+- Refreshed release history and version-aware guidance for the 2026.4.2 release family
+- Added practical callouts around Task Flow restoration, xAI/Firecrawl config-path migrations, and newer exec host/default approval behavior
+
+## 2026.4.1
+- Updated skill version to match OpenClaw 2026.4.1
+- Refreshed release history and version-aware guidance for the 2026.4.1 release family
+- Added practical callouts around `/tasks`, `agents.defaults.params`, cron `--tools` allowlists, stronger exec-approval/default behavior, and recent gateway/task/Telegram reload fixes
+
+## 2026.3.31
+- Updated skill version to match OpenClaw 2026.3.31
+- Refreshed release history and version-aware guidance for the 2026.3.31 release family
+- Added practical callouts around background tasks/flows, `/btw` reliability, stricter install/auth defaults, node-pairing trust boundaries, and per-agent `tools.exec` defaults now being honored
+
 ## 2026.3.24
 - Updated skill version to match OpenClaw 2026.3.24
 - Refreshed release history with the 2026.3.24 machine-relevant changes

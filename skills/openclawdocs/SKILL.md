@@ -50,6 +50,23 @@ When the user is asking about config, commands, or behavior that may vary by ver
   - explicit model override forwarding through `/v1/chat/completions` and `/v1/responses` is broader
   - `/tools` and the Control UI are better at showing what the current agent can actually use right now
   - restart-sentinel wake behavior and outbound local-media handling improved, which matters for restart-heavy and media-heavy workflows
+- OpenClaw 2026.3.31 changed a few areas that are easy to answer incorrectly from stale memory:
+  - detached/background work is more unified across cron, subagents, ACP, and background CLI execution, so task/flow behavior may differ from older release families
+  - per-agent `tools.exec` defaults are now actually honored when no inline override is present, which can surface new approval prompts or different exec routing after upgrade
+  - dangerous skill/plugin install paths fail closed by default unless the operator explicitly opts into unsafe install behavior
+  - gateway auth and node command exposure are stricter, so older advice that assumes looser trusted-proxy or pairing behavior may now be wrong
+  - `/btw` reliability improved on the affected reasoning path, so old workaround guidance may no longer apply
+- OpenClaw 2026.4.1 added and fixed a few areas that are easy to miss if you only remember 2026.3.x:
+  - `/tasks` is now a first-class chat-native task board, so background-work answers should consider it alongside `/status`
+  - `agents.defaults.params` exists, so provider-default parameter tuning may now belong there instead of ad hoc per-model advice
+  - cron supports per-job tool allowlists, which can be a safer answer than broad agent/global tool-policy changes
+  - exec approval/security behavior was tightened and fixed again in several places, so approvals, allowlists, and cron execution issues should be checked against current runtime/config rather than blamed on old regressions
+  - config reload/task-registry/Telegram approval-threading fixes landed, so some older restart or channel-workaround advice may now be stale
+- OpenClaw 2026.4.2 changed a few areas that are easy to answer incorrectly from stale memory:
+  - old xAI `tools.web.x_search.*` and Firecrawl `tools.web.fetch.firecrawl.*` paths are now legacy; current guidance should use the plugin-owned config paths and mention `openclaw doctor --fix` for migration when relevant
+  - Task Flow is now a more explicit first-class substrate with durable flow state and `openclaw flows`, so detached-work answers may need to mention flows rather than only tasks/sessions/cron
+  - gateway/node host exec defaults and approval/config normalization changed again, so current answers should verify the live effective exec policy instead of assuming 2026.4.1 behavior
+  - approval routing, loopback exec pairing, and provider transport/routing fixes landed, so some post-2026.3.31 regressions now have newer documented fixes
 - If you are unsure whether a behavior is documented or source-observed, label it clearly.
 
 ## Preferred lookup order
@@ -116,7 +133,7 @@ Source: <URL or local docs path>
 - Match syntax to the user’s version when known.
 - Prefer JSON5-shaped config examples when mirroring local docs, since OpenClaw config commonly uses JSON5 syntax.
 - If suggesting config edits, verify exact schema paths before claiming field names.
-- For update guidance, prefer `openclaw update` when the docs/version support it; mention package-manager fallback only when relevant.
+- For update guidance, prefer `openclaw update` and `openclaw update status` when the docs/version support them; mention raw package-manager version checks only as fallback context when relevant.
 - If a restart or config change is required, say so explicitly.
 - Do not invent CLI subcommands.
 
