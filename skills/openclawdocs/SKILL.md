@@ -67,6 +67,13 @@ When the user is asking about config, commands, or behavior that may vary by ver
   - Task Flow is now a more explicit first-class substrate with durable flow state and `openclaw flows`, so detached-work answers may need to mention flows rather than only tasks/sessions/cron
   - gateway/node host exec defaults and approval/config normalization changed again, so current answers should verify the live effective exec policy instead of assuming 2026.4.1 behavior
   - approval routing, loopback exec pairing, and provider transport/routing fixes landed, so some post-2026.3.31 regressions now have newer documented fixes
+- OpenClaw 2026.4.5 changed a few areas that are easy to answer incorrectly from stale memory:
+  - several old public config aliases are now explicitly legacy; current answers should prefer canonical public config paths and mention `openclaw doctor --fix` when helping users migrate older configs
+  - `music_generate` and `video_generate` are now built-in first-class tools, and Comfy-backed local/cloud media workflows are part of the default answer space for generation questions
+  - provider/catalog coverage shifted again, including newer bundled search, TTS, Qwen, Fireworks AI, StepFun, and Bedrock Mantle paths, so provider availability should be checked live instead of inferred from older 2026.4.x docs
+  - Claude CLI guidance changed materially: legacy configured setups may still run, but new onboarding moved away from the old bundled Claude CLI backend path
+  - memory answers may now need to account for dreaming surfaces like `/dreaming`, Dreams UI, `dreams.md`, and newer promotion/aging controls when that feature is enabled
+  - prompt caching, streaming, and progress/reporting behavior changed again, so stale advice about leaked commentary, duplicate tool inventories, or cache behavior may now be wrong
 - If you are unsure whether a behavior is documented or source-observed, label it clearly.
 
 ## Preferred lookup order

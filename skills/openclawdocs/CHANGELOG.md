@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026.4.5
+- Updated skill version to match OpenClaw 2026.4.5
+- Refreshed release history and version-aware guidance for the 2026.4.5 release family
+- Added practical callouts around built-in music/video generation, plugin/config alias cleanup, Claude CLI backend migration, and newer memory dreaming surfaces
+
 ## 2026.4.2
 - Updated skill version to match OpenClaw 2026.4.2
 - Refreshed release history and version-aware guidance for the 2026.4.2 release family

@@ -1,3 +1,17 @@
+### Version: 2026.4.5
+
+**Key Changes in 2026.4.5:**
+- **Config alias cleanup:** several old public config aliases are now explicitly legacy, so config answers should prefer canonical public paths and mention `openclaw doctor --fix` when helping older installs migrate.
+- **Built-in media generation:** `music_generate` and `video_generate` are now first-class built-in tools, and local ComfyUI / Comfy Cloud workflow-backed media generation is part of the answer space for image, music, and video questions.
+- **Provider/catalog changes:** bundled provider coverage expanded again, including Qwen, Fireworks AI, StepFun, Bedrock Mantle improvements, and more search / TTS routes, so provider-availability answers should be checked against current local docs instead of older 2026.4.x assumptions.
+- **Claude CLI migration:** bundled Claude CLI backend guidance changed materially, with legacy configured profiles kept runnable but new onboarding moving away from that path; answers should distinguish legacy working setups from current recommended setup.
+- **Memory / dreaming:** dreaming and memory-promotion surfaces are now much broader, with `/dreaming`, Dreams UI, configurable aging, REM tooling, and `dreams.md`, so memory answers should not stop at only `MEMORY.md` + daily notes when the feature is enabled.
+- **Prompt/cache/runtime stability:** prompt caching, tool inventory, streaming, and progress-reporting behavior changed substantially again, so stale advice about partial replies, cache reuse, or tool-prompt duplication may now be wrong.
+
+**Practical note for this skill:** for 2026.4.5 answers, check first whether the user’s question is really about new built-in media tools, provider/catalog changes, config alias migration, Claude CLI migration, or dreaming/memory promotion before reusing 2026.4.2-era guidance.
+
+---
+
 ### Version: 2026.4.2
 
 **Key Changes in 2026.4.2:**

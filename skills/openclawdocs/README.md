@@ -1,6 +1,6 @@
 # openclawdocs
 
-**Version:** 2026.4.2
+**Version:** 2026.4.5
 **License:** MIT
 **GitHub location:** <https://github.com/mqtllxbaby/openclaw_collection/tree/main/skills/openclawdocs>
 
@@ -8,7 +8,7 @@
 
 Its version should match the installed OpenClaw release and be refreshed for each meaningful OpenClaw version change.
 
-Current local target: OpenClaw 2026.4.2.
+Current local target: OpenClaw 2026.4.5.
 
 ## What it helps with
 
@@ -44,7 +44,7 @@ This version is prepared for future publishing/sharing:
 - stronger trigger description
 - clearer distinction between documented vs source-observed behavior
 - generic snippets that other users can adapt safely
-- refreshed guidance for OpenClaw 2026.3.22-2026.4.2 release-family changes, especially task-flow surfaces, cron/tool-policy behavior, exec approval/security defaults, config-path migrations, and newer runtime defaults
+- refreshed guidance for OpenClaw 2026.3.22-2026.4.5 release-family changes, especially media-generation tools, plugin/config migrations, task-flow surfaces, cron/tool-policy behavior, exec approval/security defaults, and newer runtime defaults
 
 ## Notes
 
